@@ -1,0 +1,30 @@
+name: Build and Test SDK
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Set up CMake
+      run: sudo apt-get install cmake
+
+    - name: Set up ARM GCC
+      run: sudo apt-get install gcc-arm-none-eabi
+
+    - name: Build SDK for Cortex-M4
+      run: |
+        mkdir build
+        cd build
+        cmake -DCMAKE_TOOLCHAIN_FILE=../arm-gcc-toolchain.cmake ..
+        make
+
+    - name: Run Cortex-M4 Tests
+      run: ./tests/test_cortex_m4

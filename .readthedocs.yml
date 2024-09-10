@@ -1,0 +1,13 @@
+# .readthedocs.yml
+
+version: 2
+
+# 指定 Sphinx 配置文件的路径
+sphinx:
+  configuration: docs/conf.py
+
+# 使用的 Python 版本
+python:
+  version: 3.8
+  install:
+    - requirements: docs/requirements.txt
