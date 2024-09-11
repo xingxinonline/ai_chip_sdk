@@ -11,6 +11,8 @@ copyright = '2024, 北京苹芯科技有限公司'
 author = '北京苹芯科技有限公司'
 release = '0.0.1'
 
+language = 'zh_CN'
+
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
 
