@@ -7,8 +7,8 @@
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
 project = 'ai_chip'
-copyright = '2024, pimchip'
-author = 'pimchip'
+copyright = '2024, 北京苹芯科技有限公司'
+author = '北京苹芯科技有限公司'
 release = '0.0.1'
 
 # -- General configuration ---------------------------------------------------
