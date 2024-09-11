@@ -1,11 +1,20 @@
+# Read the Docs configuration file for Sphinx projects
+# See https://docs.readthedocs.io/en/stable/config-file/v2.html for details
+
+# Required
 version: 2
 
-# 设置 Python 版本
-python:
-  version: 3.8
-  install:
-    - requirements: docs/requirements.txt
+# Set the OS, Python version, and other tools you might need
+build:
+  os: ubuntu-22.04
+  tools:
+    python: "3.8"
 
-# Sphinx 配置文件的路径（根据你的项目结构更新）
+# Build documentation using Sphinx
 sphinx:
   configuration: docs/source/conf.py
+
+# Install Python dependencies required to build your documentation
+python:
+  install:
+    - requirements: docs/requirements.txt
